@@ -3,18 +3,17 @@ import logo from "./logo.svg";
 import "./App.css";
 import Accordion from "./components/Accordion/Accordion";
 import Rating from "./components/Rating/Rating";
+import { OnOff } from "./components/OnOff/OnOff";
 
 function App(props: any) {
   console.log("App rendering");
   return (
     <div className="App">
       {/* <PageTitle title={"This is APP component"} />
-      <PageTitle title={"My friends"} />
-      Artikle 1
-      <Rating value={0} /> */}
+      <PageTitle title={"My friends"} /> */}
       <Accordion titleValue={"Menu"} collapsed={true} />
       <Accordion titleValue={"Users"} collapsed={false} />
-      Artikle 2
+      <OnOff />
       <Rating value={1} />
       <Rating value={2} />
       <Rating value={3} />
