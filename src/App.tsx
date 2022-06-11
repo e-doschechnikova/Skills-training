@@ -12,19 +12,24 @@ function App(props: any) {
   return (
     <div className="App">
       {/* <PageTitle title={"This is APP component"} />
-      <PageTitle title={"My friends"} /> */}
-      {/* <Accordion titleValue={"Menu"} collapsed={true} />
-      <Accordion titleValue={"Users"} collapsed={false} /> */}
+      <PageTitle title={"My friends"} /> 
+     <Accordion titleValue={"Menu"} collapsed={true} /> */}
+
+      <Accordion titleValue={"Users"} collapsed={false} />
+
       <OnOff />
+
       <UncontrolledAccordion titleValue={"Users"} />
       <UncontrolledAccordion titleValue={"Menu"} />
 
-      <UncontrolledRating value={3} />
-      <UncontrolledRating value={3} />
+      <UncontrolledRating />
+      <UncontrolledRating />
+
+      <Rating value={4} />
+
       {/* <Rating value={1} />
       <Rating value={2} />
       <Rating value={3} />
-      <Rating value={4} />
       <Rating value={5} /> */}
     </div>
   );
