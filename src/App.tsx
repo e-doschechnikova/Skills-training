@@ -11,6 +11,7 @@ function App(props: any) {
   console.log("App rendering");
 
   let [ratingValue, setratingValue] = useState<RatingValueType>(0);
+  let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
 
   return (
     <div className="App">
@@ -18,7 +19,7 @@ function App(props: any) {
       <PageTitle title={"My friends"} /> 
      <Accordion titleValue={"Menu"} collapsed={true} /> */}
 
-      <Accordion titleValue={"Users"} collapsed={false} />
+      <Accordion titleValue={"Users"} accordionCollapsed={accordionCollapsed} onClick={setAccordionCollapsed} />
 
       <OnOff />
 
