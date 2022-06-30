@@ -27,8 +27,8 @@ function App(props: any) {
         onClick={setAccordionCollapsed}
       />
 
-      <OnOff on={switchOn} onChange={setSwitchOn} />
-      <UncontrolledOnOff />
+      {/* <OnOff on={switchOn} onChange={setSwitchOn} /> */}
+      <UncontrolledOnOff onChange={setSwitchOn}  />{switchOn.toString()}
 
       <UncontrolledAccordion titleValue={"Users"} />
       <UncontrolledAccordion titleValue={"Menu"} />
