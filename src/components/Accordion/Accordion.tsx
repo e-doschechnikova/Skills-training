@@ -4,7 +4,7 @@ import React from "react";
 type AccordionPropsType = {
   titleValue: string;
   accordionCollapsed: boolean;
-  onClick: (type: boolean) => void;
+  onClick: (accordionCollapsed: boolean) => void;
 };
 
 function Accordion(props: AccordionPropsType) {
