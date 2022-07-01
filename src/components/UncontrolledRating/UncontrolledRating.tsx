@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import styles from "./UncontrolledRating.module.css";
 
-type RatingPropsType = {};
+export type RatingValueType = 0 | 1 | 2 | 3 | 4 | 5;
+
+type RatingPropsType = {
+  defaulValue?: RatingValueType;
+  onChange: (value: RatingValueType) => void;
+};
 
 export const UncontrolledRating = (props: RatingPropsType) => {
   console.log("Rating rendering");
 
-  let [value, setValue] = useState(0);
+  let [value, setValue] = useState<RatingValueType>(
+    props.defaulValue ? props.defaulValue : 0
+  );
 
   return (
     <div>
@@ -14,6 +21,7 @@ export const UncontrolledRating = (props: RatingPropsType) => {
         selected={value > 0}
         setValue={() => {
           setValue(1);
+          props.onChange(1);
         }}
       />
       {/* <button
@@ -27,6 +35,7 @@ export const UncontrolledRating = (props: RatingPropsType) => {
         selected={value > 1}
         setValue={() => {
           setValue(2);
+          props.onChange(2);
         }}
       />
       {/* <button
@@ -40,6 +49,7 @@ export const UncontrolledRating = (props: RatingPropsType) => {
         selected={value > 2}
         setValue={() => {
           setValue(3);
+          props.onChange(3);
         }}
       />
       {/* <button
@@ -53,6 +63,7 @@ export const UncontrolledRating = (props: RatingPropsType) => {
         selected={value > 3}
         setValue={() => {
           setValue(4);
+          props.onChange(4);
         }}
       />
       {/* <button
@@ -66,6 +77,7 @@ export const UncontrolledRating = (props: RatingPropsType) => {
         selected={value > 4}
         setValue={() => {
           setValue(5);
+          props.onChange(5);
         }}
       />
       {/* <button

@@ -28,14 +28,14 @@ function App(props: any) {
       />
 
       {/* <OnOff on={switchOn} onChange={setSwitchOn} /> */}
-      <UncontrolledOnOff onChange={setSwitchOn} />
+      <UncontrolledOnOff onChange={setSwitchOn} defaultOn />
       {switchOn.toString()}
 
       <UncontrolledAccordion titleValue={"Users"} />
       <UncontrolledAccordion titleValue={"Menu"} />
 
-      <UncontrolledRating />
-      <UncontrolledRating />
+      <UncontrolledRating defaulValue={0} onChange={() => {}} />
+      <UncontrolledRating defaulValue={0} onChange={() => {}} />
 
       <Rating value={ratingValue} onClick={setratingValue} />
 
