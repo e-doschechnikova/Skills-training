@@ -35,7 +35,7 @@ function Star(props: StarPropsType) {
         props.onClick(props.value);
       }}
     >
-      {props.selected ? <b>star</b> : "star"}
+      {props.selected ? <b>★</b> : "☆"}
     </span>
   );
 }

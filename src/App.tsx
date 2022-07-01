@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Accordion from "./components/Accordion/Accordion";
+import { Accordion } from "./components/Accordion/Accordion";
 import Rating, { RatingValueType } from "./components/Rating/Rating";
 import { OnOff } from "./components/OnOff/OnOff";
-import { UncontrolledAccordion } from "./components/Accordion/UncontrolledAccordion";
-import { UncontrolledRating } from "./components/Rating/UncontrolledRating";
-import { UncontrolledOnOff } from "./components/OnOff/UncontrolledOnOff";
+import { UncontrolledAccordion } from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import { UncontrolledRating } from "./components/UncontrolledRating/UncontrolledRating";
+import { UncontrolledOnOff } from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
 function App(props: any) {
   console.log("App rendering");
@@ -28,7 +28,8 @@ function App(props: any) {
       />
 
       {/* <OnOff on={switchOn} onChange={setSwitchOn} /> */}
-      <UncontrolledOnOff onChange={setSwitchOn}  />{switchOn.toString()}
+      <UncontrolledOnOff onChange={setSwitchOn} />
+      {switchOn.toString()}
 
       <UncontrolledAccordion titleValue={"Users"} />
       <UncontrolledAccordion titleValue={"Menu"} />
