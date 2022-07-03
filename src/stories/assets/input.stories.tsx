@@ -1,3 +1,4 @@
+import { action } from "@storybook/addon-actions";
 import React, { ChangeEvent, useRef, useState } from "react";
 
 export default {
@@ -35,6 +36,14 @@ export const GetValueOfUncontrolledInputByButtonPress = () => {
       <button onClick={save}>save</button> - actual value: {value}
     </>
   );
+};
+
+export const ControlledInput = () => {
+  const [parentValue, setParentValue] = useState("");
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setParentValue(e.currentTarget.value);
+  };
+  return <input value={parentValue} onChange={onChange} />;
 };
 
 export const ControlledInputWithFixedValue = () => <input value={"hello"} />;
