@@ -21,11 +21,12 @@ function App(props: any) {
       <PageTitle title={"My friends"} /> 
      <Accordion titleValue={"Menu"} collapsed={true} /> */}
 
-      <Accordion
+      {/* <Accordion
         titleValue={"Users"}
         accordionCollapsed={accordionCollapsed}
         onClick={setAccordionCollapsed}
-      />
+        
+      /> */}
 
       {/* <OnOff on={switchOn} onChange={setSwitchOn} /> */}
       <UncontrolledOnOff onChange={setSwitchOn} defaultOn />
